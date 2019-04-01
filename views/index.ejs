@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>Barbora Oak's Army</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Barbora Oak's Army</h1>
+        <section class="welcome">
+        <h1>Welcome to Barbara Oak's Army!</h1>
+        <p>Here at BOA, we strive to pass on the wise teachings of Dr. Barbara Oak. Primarily, the bit about spaced repition and especially anything having to do with diffuse mode. Mm. Diffusion.</p>
+        <section class=loginW>
+          <% if (message.length > 0) { %>
+              <div class="alert alert-danger"><%= message %></div>
+          <% } %>
+        <p>You logging in or nah?</p>
+        <a class="btn btn-default" id="loginB"><span class="fa fa-user"></span>Login</a>
+        <a class="btn btn-default" id="signupB"><span class="fa fa-user"></span>Signup</a>
+        </section>
+
+        <section class="logIn" id="loginHidden">
+          <h1><span class="fa fa-sign-in"></span> Login</h1>
+          <form action="/login" method="post">
+              <div class="form-group">
+                  <label>Email</label>
+                  <input type="text" class="form-control" name="email">
+              </div>
+              <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password">
+              </div>
+              <button type="submit" class="btn btn-warning btn-lg">Login</button>
+          </form>
+          <hr>
+        </section>
+
+        <section class="signupHidden">
+          <h1><span class="fa fa-sign-in"></span> Signup</h1>
+          <form action="/signup" method="post">
+              <div class="form-group">
+                  <label>Email</label>
+                  <input type="text" class="form-control" name="email">
+              </div>
+              <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password">
+              </div>
+              <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+          </form>
+        </section>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+need to change database link
+research flash messages
+add _name property to users collection
+create CSS file for profile
+remove unlink and local options?
+create words collection
+
+
+---------- info----------
+--profile.ejs 
+-.well = section with user information + unlink and connect local option
+-col-sm-6 = section that displays all words. needs hiding
+-messages class being replaced words
+-words class = words list needs hiding
+-randword = random word
+-message class being replaced word
+-messages[i] replaced with words[i]
+-/messages replaced with /words
+-removed thumbup, added thumbdown (which wasn't there before)
+-removed trash
+-removed adding message option
+-figure out how to randomly generate word
+-created .randWard section with for random word
+-created profBttns section for word generating buttons 
+-Created 3 buttons, all with class btn  and classes randSav
+ savLis
+ ranWord for random saved word, saved word list and random word buttons respectively
+-need to add javascript to above buttons to display stuff once clicked
+
+
+----main.ejs
+-created wrapper section
+-created .mainWords section
+-created .mainword li with template inside. 4 spans, last span has icon
+-Need to find out wtf   <% if (user.local.email) { %> does and why the value of name is equal to <% user.local.email %>
+--Find out how to display error message if user submits word that already exists. Optional: if existing def appears, can ask if user thinks the current definition needs changing and give option for submitting suggestion. Altenratively, can also just let them submit it and allow it to be displayed on right section of page where comparisans are left up to be voted on and either replaced or merged
+--Do I use the same main.js file for client-side javascript on this? Should I create my own?
+--Find out how to add pagination
+--have to make on click of button trigger get of words
+
+----routes.ejs
+-changed all instances of messages to words
+-deleted delete section
+-updated instances of words (previously messages) so targeted properties are accurate. name -> word, msg -> def
+--.post also has name property for username
+--changed app.get from /profile to /main and the ejs to main.ejs. since this is where the words list is being automatically loaded
+--find out what user in app.get does
+--changed app.post to redirect to /main since that's what renders main.ejs and is where things will be posted from
+--now that i've merged the signup, login and landing page, what do i do with line 55-60 where the signup form is rendered? I'm assuming we can get rid of it since it's being loaded, but how about the flash message part?
+--if removing unlink option, take out line 66
+--

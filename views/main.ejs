@@ -1,0 +1,32 @@
+  <!doctype html>
+<html>
+<head>
+    <title>BOA Word Database</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+<ul class="mainWords">
+  <li class="mainWord">
+    <span><%= words[i].name %></span>
+    <span><%= words[i].def %></span>
+    <span><%= words[i].thumbDown %></span>
+    <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+  </li>
+</ul>
+<h2>Add a word</h2>
+    <% if (user.local.email) { %>
+      <form action="/words" method="POST">
+        <input type="text" value="<%= user.local.email %>" name="name">
+        <input type="text" placeholder="Type new word here" name="word">
+        <input type="text" placeholder="Definition" name="def">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <% } %>
+<p><a href="/profile">Go back to profile</a></p>
+</div>
+</body>
+</html>

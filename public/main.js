@@ -4,9 +4,11 @@ document.getElementById('signupB').addEventListener('click', signup);
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 
 function login(){
+  console.log("login")
   document.getElementById('loginHidden').style.display = "block"
 }
 function signup(){
+  console.log("signup")
   document.getElementById('signupHidden').style.display = "block"
 }
 Array.from(thumbUp).forEach(function(element) {
@@ -14,7 +16,7 @@ Array.from(thumbUp).forEach(function(element) {
         const name = this.parentNode.parentNode.childNodes[1].innerText
         const msg = this.parentNode.parentNode.childNodes[3].innerText
         const thumbUp = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
-        fetch('messages', {
+        fetch('words', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({

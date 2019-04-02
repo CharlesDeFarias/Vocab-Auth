@@ -14,14 +14,11 @@
         <h1>Welcome to Barbara Oak's Army!</h1>
         <p>Here at BOA, we strive to pass on the wise teachings of Dr. Barbara Oak. Primarily, the bit about spaced repition and especially anything having to do with diffuse mode. Mm. Diffusion.</p>
         <section class=loginW>
-          <% if (message.length > 0) { %>
-              <div class="alert alert-danger"><%= message %></div>
-          <% } %>
+
         <p>You logging in or nah?</p>
         <a class="btn btn-default" id="loginB"><span class="fa fa-user"></span>Login</a>
         <a class="btn btn-default" id="signupB"><span class="fa fa-user"></span>Signup</a>
         </section>
-
         <section class="logIn" id="loginHidden">
           <h1><span class="fa fa-sign-in"></span> Login</h1>
           <form action="/login" method="post">
@@ -38,7 +35,7 @@
           <hr>
         </section>
 
-        <section class="signupHidden">
+        <section id="signupHidden">
           <h1><span class="fa fa-sign-in"></span> Signup</h1>
           <form action="/signup" method="post">
               <div class="form-group">
@@ -54,5 +51,6 @@
         </section>
     </div>
 </div>
+<script src="main.js" charset="utf-8"></script>
 </body>
 </html>

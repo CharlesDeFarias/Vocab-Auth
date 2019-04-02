@@ -5,7 +5,7 @@ body{
 img{
   height: 200px;
 }
-signupHidden,loginHidden{
+#signupHidden,#loginHidden{
   display: none;
   flost: left;
   width: 50%;
